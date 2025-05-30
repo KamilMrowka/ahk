@@ -40,7 +40,6 @@ SetCapsLockState("Off")
 
 *n::SendInput("{Blind}{Alt down}{Insert}{Alt up}")
 *o::SendInput("{Blind}{Shift down}{Escape}{Shift up}")
-*w::SendInput("{Blind}{Alt down}1{Alt up}")
 *m::SendInput("{Blind}{Backspace}")
 
 v::SoundSetVolume("+5")
@@ -74,6 +73,16 @@ v::SoundSetVolume("+5")
 }
 
 *'::Send("^v")
+
+*1::workspaces(1)
+*2::workspaces(2)
+*3::workspaces(3)
+*4::workspaces(4)
+*5::workspaces(5)
+*6::workspaces(6)
+*7::workspaces(7)
+*8::workspaces(8)
+*9::workspaces(9)
 #HotIf
 
 
@@ -114,6 +123,10 @@ switcher(triggerKey, switchKey) {
     Sleep(50)
     Send(switchKey)
     Send("{Ctrl up}")
+}
+
+workspaces(workspaceNumber) {
+   Send("!" workspaceNumber)
 }
 
 
