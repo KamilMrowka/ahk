@@ -51,16 +51,16 @@ v::SoundSetVolume("+5")
 
 *e::Send("^a")
 
-*s:: {
+*a:: {
     SendInput("{Ctrl down}")
-    while GetKeyState("s", "P")
+    while GetKeyState("a", "P")
         Sleep(10)
     SendInput("{Ctrl up}")
 }
-
-*a:: {
+*w::Send("^+e")
+*s:: {
     SendInput("{Shift down}")
-    while GetKeyState("a", "P")
+    while GetKeyState("s", "P")
         Sleep(10)
     SendInput("{Shift up}")
 }
@@ -104,7 +104,7 @@ v::SoundSetVolume("+5")
 *k::Send("{Ctrl down}{Shift down}t{Shift up}{Ctrl up}")
 *i::Send("^i")
 *o::Send("^o")
-*w::Send("^n")
+*w::Send("^b")
 *e::Send("^+n")
 *r::Send("^+f")
 #HotIf
